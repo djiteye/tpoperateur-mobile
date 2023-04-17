@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.943"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.026"
+      tools:srcCompat="@tools:sample/avatars" />
+
+  <TextView
+      android:id="@+id/login2"
+      android:layout_width="120dp"
+      android:layout_height="30dp"
+      android:gravity="center"
+      android:text="login"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.945"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView"
+      app:layout_constraintVertical_bias="0.026" />
+
+  <TextView
+      android:id="@+id/numtitre"
+      android:layout_width="350dp"
+      android:layout_height="40dp"
+      android:text="saisir votre numero de telephone :"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/login2"
+      app:layout_constraintVertical_bias="0.029" />
+
+  <EditText
+      android:id="@+id/numtelephone"
+      android:layout_width="300dp"
+      android:layout_height="50dp"
+      android:ems="10"
+      android:hint="votre numero de telephone"
+      android:inputType="phone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/numtitre"
+      app:layout_constraintVertical_bias="0.021" />
+
+  <TextView
+      android:id="@+id/result1"
+      android:layout_width="300dp"
+      android:layout_height="40dp"
+      android:hint="resultat1"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/numtelephone"
+      app:layout_constraintVertical_bias="0.05"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      />
+
+  <TextView
+      android:id="@+id/codetitre"
+      android:layout_width="350dp"
+      android:layout_height="60dp"
+      android:text="entrez votre code de recharge (14 chiffres)"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/result1"
+      app:layout_constraintVertical_bias="0.072" />
+
+  <EditText
+      android:id="@+id/codeR"
+      android:layout_width="300dp"
+      android:layout_height="50dp"
+      android:ems="10"
+      android:hint="votre code"
+      android:inputType="number"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/codetitre"
+      app:layout_constraintVertical_bias="0.036" />
+
+  <TextView
+      android:id="@+id/rechargerl"
+      android:layout_width="300dp"
+      android:layout_height="40dp"
+      android:text="recharger votre ligne"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/codeR"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <LinearLayout
+      android:id="@+id/tt"
+      android:layout_width="405dp"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rechargerl"
+      app:layout_constraintVertical_bias="0.08">
+
+    <EditText
+        android:id="@+id/recharge"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="votre recharge"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/brecharge"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="Appeler" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/consult"
+      android:layout_width="405dp"
+      android:layout_height="40dp"
+      android:text="Pour consulter le solde de votre compte"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tt"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <LinearLayout
+      android:id="@+id/tt2"
+      android:layout_width="405dp"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/consult"
+      app:layout_constraintVertical_bias="0.111">
+
+    <EditText
+        android:id="@+id/consulter"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="code de consultation"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/bconsulter"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:text="Appeler" />
+  </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
